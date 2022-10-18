@@ -24,6 +24,16 @@ mongoose.connect(
   }
 );
 // .catch((error) => console.log(error));
+console.log(
+  "mongodb+srv://" +
+    process.env.MONGO_USER +
+    ":" +
+    process.env.MONGO_PWD +
+    "@" +
+    process.env.MONGO_CLUSTER +
+    "/" +
+    process.env.MONGO_DB
+);
 
 async function getUsers(name, job) {
   let result;
