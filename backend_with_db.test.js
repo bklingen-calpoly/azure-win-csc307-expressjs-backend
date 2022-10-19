@@ -10,7 +10,7 @@ test("test getUsers - all", async () => {
   //   name: "Joe",
   // };
 
-  expect(result[0].name).toBe("Charlie");
+  expect(result[0].name).toBe("Joe");
   expect(result[0].job).toBe("Janitor");
 });
 
