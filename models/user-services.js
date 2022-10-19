@@ -24,6 +24,7 @@ mongoose.connect(
   }
 );
 // .catch((error) => console.log(error));
+console.log("process.env:" + process.env);
 console.log(
   "mongodb+srv://" +
     process.env.MONGO_USER +
