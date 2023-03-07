@@ -24,17 +24,17 @@ mongoose.connect(
   }
 );
 // .catch((error) => console.log(error));
-console.log("process.env:" + process.env);
-console.log(
-  "mongodb+srv://" +
-    process.env.MONGO_USER +
-    ":" +
-    process.env.MONGO_PWD +
-    "@" +
-    process.env.MONGO_CLUSTER +
-    "/" +
-    process.env.MONGO_DB
-);
+// console.log("process.env:" + process.env);
+// console.log(
+//   "mongodb+srv://" +
+//     process.env.MONGO_USER +
+//     ":" +
+//     process.env.MONGO_PWD +
+//     "@" +
+//     process.env.MONGO_CLUSTER +
+//     "/" +
+//     process.env.MONGO_DB
+// );
 
 async function getUsers(name, job) {
   let result;
