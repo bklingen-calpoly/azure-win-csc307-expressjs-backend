@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - ci-cd
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 defaults:
   run:
