@@ -5,9 +5,9 @@ on:
       - main
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: expressjs-backend
+# defaults:
+#   run:
+#     working-directory: expressjs-backend
 
 jobs:
   build:
