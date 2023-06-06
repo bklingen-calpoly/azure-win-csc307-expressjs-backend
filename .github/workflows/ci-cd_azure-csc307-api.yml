@@ -8,18 +8,18 @@ on:
     branches:
       - main
       - ci-cd
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 defaults:
   run:
     working-directory: expressjs-backend
 
 env:
-  AZURE_WEBAPP_PACKAGE_PATH: ‘expressjs-backend/.’ # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: expressjs-backend # set this to the path to your web app project, defaults to the repository root
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -47,7 +47,7 @@ jobs:
           path: .
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     environment:
       name: "Production"
