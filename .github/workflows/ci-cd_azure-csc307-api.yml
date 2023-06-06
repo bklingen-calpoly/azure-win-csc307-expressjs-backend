@@ -6,6 +6,7 @@ name: Build and deploy Node.js app to Azure Web App - azure-csc307-api
 on:
   push:
     branches:
+      - main
       - ci-cd
   workflow_dispatch:
 
