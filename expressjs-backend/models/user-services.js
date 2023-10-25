@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 // Uncomment the following to debug mongoose queries, etc.
+// test ci-cd
 mongoose.set("debug", true);
 
 mongoose.connect(
