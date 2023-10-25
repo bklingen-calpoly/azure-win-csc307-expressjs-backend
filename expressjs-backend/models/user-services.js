@@ -7,10 +7,21 @@ dotenv.config();
 //mongoose.set("debug", true);
 
 mongoose
-  .connect("mongodb://localhost:27017/users", {
-    useNewUrlParser: true, //useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://" +
+      process.env.MONGO_USER +
+      ":" +
+      process.env.MONGO_PWD +
+      "@" +
+      process.env.MONGO_CLUSTER +
+      "/" +
+      process.env.MONGO_DB +
+      "?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true, //useFindAndModify: false,
+      useUnifiedTopology: true,
+    }
+  )
   .catch((error) => console.log(error));
 
 async function getUsers(name, job) {
@@ -60,5 +71,6 @@ async function findUserByNameAndJob(name, job) {
 }
 
 exports.getUsers = getUsers;
+exports.findUserByName = findUserByName;
 exports.findUserById = findUserById;
 exports.addUser = addUser;
