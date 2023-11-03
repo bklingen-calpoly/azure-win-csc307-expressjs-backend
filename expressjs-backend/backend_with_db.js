@@ -9,7 +9,9 @@ const app = express();
 const port = 5000;
 const APP_VERSION = "1.0.1 subdirectory";
 
-app.use(cors({ origin: "http://localhost" }));
+app.use(
+  cors({ origin: "https://calm-meadow-0266e821e.2.azurestaticapps.net" })
+);
 
 app.use(express.json());
 
