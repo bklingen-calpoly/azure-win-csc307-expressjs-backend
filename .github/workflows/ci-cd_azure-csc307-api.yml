@@ -37,8 +37,10 @@ jobs:
           MONGO_PWD: ${{ secrets.MONGO_PWD }}
           MONGO_CLUSTER: ${{ secrets.MONGO_CLUSTER}}
 
-      - name: compress artifact to upload
-        run: 7z a backend.zip expressjs-backend
+      # - name: compress artifact to upload
+      #   run: 7z a backend.zip expressjs-backend
+      - name: Zip artifact for development job
+        run: Compress-Archive -Path * -DestinationPath backend.zip
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
