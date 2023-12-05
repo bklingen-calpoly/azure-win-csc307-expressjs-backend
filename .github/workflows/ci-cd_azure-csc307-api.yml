@@ -7,7 +7,7 @@ name: Build and deploy Node.js app to Azure Web App - azure-csc307-api-win
 on:
   push:
     branches:
-      - ci-cd
+      - ci-cd-win-optimized
   workflow_dispatch:
 
 defaults:
