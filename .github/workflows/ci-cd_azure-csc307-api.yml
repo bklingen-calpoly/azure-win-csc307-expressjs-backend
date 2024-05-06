@@ -61,9 +61,9 @@ jobs:
         with:
           name: node-app
 
-      - name: unzip artifact for deployment
-        run: Expand-Archive -Path backend.zip -DestinationPath .
-        working-directory: .
+      # - name: unzip artifact for deployment
+      #   run: Expand-Archive -Path backend.zip -DestinationPath .
+      #   working-directory: .
 
       - name: "Deploy to Azure Web App"
         uses: azure/webapps-deploy@v2
